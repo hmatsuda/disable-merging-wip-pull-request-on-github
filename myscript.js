@@ -7,11 +7,15 @@ var config = {
 var observer = new MutationObserver(function(mutations, self) {
   mutations.forEach(function(mutation) {
     if (mutation.type === 'childList') {
-      var elements = document.querySelectorAll('#js-pull-merging .primary.merge-branch-action');
+      var elements = document.querySelectorAll('#js-pull-merging .merge-branch-action');
       Array.prototype.forEach.call(elements, function(element) {
-        if (document.getElementsByClassName("js-issue-title")[0].textContent > -1) {
+        if (document.getElementsByClassName("js-issue-title")[0].textContent.indexOf("WIP") > -1) {
           if (element.className.indexOf("primary") > -1) {
             element.className = element.className.replace(/primary/g, 'disabled').replace(/js-details-target/g, '');
+          }
+        } else {
+          if (element.className.indexOf("disabled") > -1) {
+            element.className = element.className.replace(/disabled/g, 'primary js-details-target');
           }
         }
       });
