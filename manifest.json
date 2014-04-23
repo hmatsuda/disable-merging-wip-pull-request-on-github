@@ -1,5 +1,5 @@
 {
-  "name": "Disable 'Merge pull request' Button when PR is WIP on GitHub",
+  "name": "Disable to merge WIP PR on GitHub",
   "version": "0.1",
   "manifest_version": 2,
   "description": "Disable Merge pull request Button when PR is WIP on GitHub.",
