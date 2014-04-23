@@ -1,0 +1,16 @@
+{
+  "name": "Disable 'Merge pull request' Button when PR is WIP on GitHub",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Disable Merge pull request Button when PR is WIP on GitHub.",
+  
+  "permissions": [
+    "tabs", "https://github.com/*/*/pull/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "https://github.com/*/*/pull/*" ],
+      "js": [ "myscript.js" ]
+    }
+  ]
+}
