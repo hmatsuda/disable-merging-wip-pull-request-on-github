@@ -20,7 +20,7 @@ function observeMergeButton() {
 
   var observer = new MutationObserver(function(mutations, self) {
     mutations.forEach(function(mutation) {
-      if (mutation.type === 'childList') {
+      if (mutation.type === 'characterData') {
         var elements = document.querySelectorAll('.merge-branch-action');
         Array.prototype.forEach.call(elements, function(element) {
           toggleMergeButton(element);
@@ -32,4 +32,7 @@ function observeMergeButton() {
   observer.observe(target, config);
 }
 
-window.onload = observeMergeButton;
+window.onload = function() {
+  toggleMergeButton(document.querySelector(".merge-branch-action"));
+  observeMergeButton();
+}
