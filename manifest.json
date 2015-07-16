@@ -1,5 +1,5 @@
 {
-  "name": "Disable GitHub PR merges"
+  "name": "Disable GitHub PR merges",
   "version": "0.4",
   "manifest_version": 2,
   "description": "Disable merging pull requests on GitHub",
