@@ -1,8 +1,8 @@
 {
-  "name": "Disable to merge WIP PR on GitHub",
-  "version": "0.3",
+  "name": "Disable GitHub PR merges",
+  "version": "0.4",
   "manifest_version": 2,
-  "description": "Disable Merge pull request Button when PR is WIP on GitHub.",
+  "description": "Disable merging pull requests on GitHub",
   
   "permissions": [
     "tabs", "https://github.com/*/*/pull/*"
